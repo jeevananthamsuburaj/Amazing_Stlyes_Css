@@ -1,0 +1,339 @@
+part-1
+Aside attack navbar
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { margin:0; font-family:sans-serif; background:#f0f0f0; }
+
+/* Navbar frame */
+.navbar {
+    width: 400px;
+    height: 70px;
+    padding: 10px;
+    margin: 100px;
+    margin-left: 250px;
+    display:flex;
+    justify-content:center;
+    background:white;
+    position: relative;
+    border-radius: 10px;
+}
+
+/* icon list */
+.navbar ul {
+  list-style:none;
+  display:flex;
+  margin:0;
+  padding:0;
+}
+
+/* li box */
+.navbar li {
+  width: 40px;
+  height: 40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 10px;
+  cursor:pointer;
+  transition: background .2s;
+}
+
+.navbar li.active {
+  background: orange;
+}
+
+.navbar li img {
+  width: 28px;
+  height: 28px;
+  pointer-events:none;
+}
+
+/* mountain */
+.mountain {
+  position:absolute;
+  bottom:0;
+  width:30px;
+  height:22px;
+  background:orange;
+  border-radius:350% 350% 150% 150%;
+  transition:transform .35s ease;
+  z-index:5;
+}
+
+/* stone */
+.stone {
+  position:absolute;
+  width:14px;
+  height:14px;
+  background:orange;
+  border-radius:50%;
+  z-index:20;
+  display:none;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <ul>
+    <li class="active"><img src="https://cdn.iconscout.com/icon/free/png-512/free-home-icon-svg-download-png-2036112.png?f=webp&w=256"></li>
+    <li><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/bag-icon-svg-download-png-10140913.png?f=webp&w=256"></li>
+    <li><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/contact-icon-svg-download-png-10312732.png?f=webp&w=256"></li>
+    <li><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/folder-icon-svg-download-png-2274646.png?f=webp&w=256"></li>
+  </ul>
+
+  <div class="mountain"></div>
+  <div class="stone"></div>
+</nav>
+
+
+<script>
+const navbar = document.querySelector(".navbar");
+const items = document.querySelectorAll(".navbar li");
+const mountain = document.querySelector(".mountain");
+const stone = document.querySelector(".stone");
+
+/* find mountain X position under li */
+function getMountainX(li) {
+  const rect = li.getBoundingClientRect();
+  const nav = navbar.getBoundingClientRect();
+  return rect.left - nav.left + rect.width/2 - mountain.offsetWidth/2;
+}
+
+/* place mountain initially */
+mountain.style.transform = `translateX(${getMountainX(items[0])}px)`;
+
+/* click event */
+items.forEach(li => {
+  li.addEventListener("click", () => {
+
+    /* remove active */
+    items.forEach(x => x.classList.remove("active"));
+
+    const nav = navbar.getBoundingClientRect();
+    const icon = li.querySelector("img").getBoundingClientRect();
+
+    /* ---- 1. slide mountain under li ---- */
+    let mx = getMountainX(li);
+    mountain.style.transform = `translateX(${mx}px)`;
+
+    /* ---- 2. mountain shoot-up small effect ---- */
+    mountain.animate([
+      { transform:`translateX(${mx}px) translateY(0)` },
+      { transform:`translateX(${mx}px) translateY(-25px)` },
+      { transform:`translateX(${mx}px) translateY(0)` }
+    ],{ duration:350, easing:"ease-out" });
+
+    /* ---- 3. STONE START POSITION (mountain top center) ---- */
+    const mRect = mountain.getBoundingClientRect();
+    const startX = mRect.left - nav.left + mRect.width/2 - 7;
+    const startY = mRect.top - nav.top - 5;   // small GAP above mountain
+
+    /* ---- 4. STONE END POSITION (icon center) ---- */
+    const iconX = icon.left - nav.left + icon.width/2 - 7;
+    const iconY = icon.top - nav.top + icon.height/2 - 7;
+
+    /* set stone start position */
+    stone.style.left = startX + "px";
+    stone.style.top = startY + "px";
+    stone.style.display = "block";
+
+    /* stone travel animation */
+    const anim = stone.animate([
+      { transform:"translate(0,0) scale(1)" },
+      { transform:`translate(${iconX-startX}px, ${iconY-startY}px) scale(0.9)` }
+    ],{
+      duration:400,
+      easing:"ease-out",
+      fill:"forwards"
+    });
+
+    /* ---- 5. when stone reaches icon → hide + color change ---- */
+    anim.onfinish = () => {
+      stone.style.display="none";
+      li.classList.add("active");
+    };
+
+  });
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+part -2
+directly attack navbar
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { margin:0; font-family:sans-serif; background:#f0f0f0; }
+
+/* Navbar frame */
+.navbar {
+    width: 200px;
+    height: 80px;
+    padding: 10px;
+    margin: 100px auto;
+    display:flex;
+    justify-content:center;
+    background:white;
+    position: relative;
+    border-radius: 10px;
+}
+
+/* icon list */
+.navbar ul {
+  list-style:none;
+  display:flex;
+  margin:0;
+  padding:0px;
+}
+
+/* li box */
+.navbar li {
+  width: 40px;
+  height: 40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 10px;
+  cursor:pointer;
+  transition: background .2s;
+}
+
+.navbar li.active {
+  background: orange;
+}
+
+.navbar li img {
+  width: 28px;
+  height: 28px;
+  pointer-events:none;
+}
+
+/* mountain */
+.mountain {
+  position:absolute;
+  top:75px;
+  left:0;
+  bottom:0;
+  width:30px;
+  height:22px;
+  background:orange;
+  border-radius:350% 350% 150% 150%;
+  z-index:5;
+}
+
+/* stone */
+.stone {
+  position:absolute;
+  width:14px;
+  height:14px;
+  background:orange;
+  border-radius:50%;
+  z-index:20;
+  display:none;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <ul>
+    <li class="active"><img src="https://cdn.iconscout.com/icon/free/png-512/free-home-icon-svg-download-png-2036112.png?f=webp&w=256"></li>
+    <li><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/bag-icon-svg-download-png-10140913.png?f=webp&w=256"></li>
+    <li><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/contact-icon-svg-download-png-10312732.png?f=webp&w=256"></li>
+    <li><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/folder-icon-svg-download-png-2274646.png?f=webp&w=256"></li>
+      <li><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/search-icon-svg-download-png-470386.png?f=webp&w=256"></li>
+  </ul>
+
+  <div class="mountain"></div>
+  <div class="stone"></div>
+</nav>
+
+<script>
+const navbar = document.querySelector(".navbar");
+const items = document.querySelectorAll(".navbar li");
+const mountain = document.querySelector(".mountain");
+const stone = document.querySelector(".stone");
+
+// get mountain X under li
+function getMountainX(li) {
+  const rect = li.getBoundingClientRect();
+  const nav = navbar.getBoundingClientRect();
+  return rect.left - nav.left + rect.width/2 - mountain.offsetWidth/2;
+}
+
+// place mountain initially
+mountain.style.transform = `translateX(${getMountainX(items[0])}px)`;
+
+items.forEach(li => {
+  li.addEventListener("click", () => {
+
+    // remove active from all
+    items.forEach(x => x.classList.remove("active"));
+
+    const nav = navbar.getBoundingClientRect();
+    const icon = li.querySelector("img").getBoundingClientRect();
+
+    // move mountain horizontally
+    const mx = getMountainX(li);
+
+    // mountain jump animation
+    const jumpHeight = -25; // negative = up
+    const mountainAnim = mountain.animate([
+      { transform:`translateX(${mx}px) translateY(0)` },
+      { transform:`translateX(${mx}px) translateY(${jumpHeight}px)` },
+      { transform:`translateX(${mx}px) translateY(0)` }
+    ], {
+      duration: 400,
+      easing: "ease-out",
+      fill: "forwards"
+    });
+
+    // after jump, set final transform
+    mountainAnim.onfinish = () => {
+      mountain.style.transform = `translateX(${mx}px) translateY(0)`;
+    };
+
+    // stone start (mountain top center)
+    const mRect = mountain.getBoundingClientRect();
+    const startX = mRect.left - nav.left + mRect.width/2 - 7;
+    const startY = mRect.top - nav.top - 5; // small gap above mountain
+
+    // stone end (icon center)
+    const endX = icon.left - nav.left + icon.width/2 - 7;
+    const endY = icon.top - nav.top + icon.height/2 - 7;
+
+    stone.style.left = startX + "px";
+    stone.style.top = startY + "px";
+    stone.style.display = "block";
+
+    stone.animate([
+      { transform:"translate(0,0) scale(1)", opacity:1 },
+      { transform:`translate(${endX-startX}px, ${endY-startY}px) scale(0.9)`, opacity:0 }
+    ], { duration:400, easing:"ease-out", fill:"forwards" })
+    .onfinish = () => {
+      stone.style.display="none";
+      li.classList.add("active");
+    };
+  });
+});
+</script>
+
+</body>
+</html>

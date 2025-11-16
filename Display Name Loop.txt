@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+.change-text{
+    font-size: 1.5rem;
+    font-weight: 600;
+
+
+}
+.change-text h3{
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+    
+}
+.word{
+    color: orange;
+}
+
+.change-text h3 .word{
+    position: absolute;
+    display: flex;
+    opacity: 0;
+
+}
+.change-text h3 .word .letter{
+    transform-origin: center center 25px;
+    
+
+}
+.change-text h3 .word .letter.out{
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6,0,0.7,0.2);
+    
+
+}
+.change-text h3 .word .letter.in{
+    transition: 0.38s ease;
+
+}
+.change-text h3 .word .letter.behind{
+    transform: rotateX(-90deg);
+    
+}
+
+    </style>
+</head>
+<body>
+    <div class="change-text">
+        <h3>And I'm<ef > &nbsp; </ef></h3>
+        <h3>
+            <span class="word">Frontend&nbsp;Developer</span>
+            <span class="word">Backend&nbsp;Developer</span>
+            <span class="word">Web&nbsp;Design</span>
+            <span class="word">Java&nbsp;Developer</span>
+            <span class="word">Frontend&nbsp;Developer</span>
+            <span class="word">Backend&nbsp;Developer</span>
+            <span class="word">Web&nbsp;Design</span>
+            <span class="word">Java&nbsp;Developer</span>
+            <span class="word">Frontend&nbsp;Developer</span>
+            <span class="word">Backend&nbsp;Developer</span>
+            <span class="word">Web&nbsp;Design</span>
+            <span class="word">Java&nbsp;Developer</span>
+
+        </h3>
+     </div>
+
+     <script>
+
+        let words = document.querySelectorAll(".word");
+words.forEach((word)=>{
+    let letters = word.textContent.split("");
+    word.textContent="";
+    letters.forEach((letter)=>{
+        let span = document.createElement("span");
+        span.textContent = letter;
+        span.className = "letter";
+        word.append(span);
+    });
+});
+
+let currentWordIndex = 0;
+let maxWordIndex = words.length -1;
+words[currentWordIndex].style.opacity ="1";
+
+let changeText = ()=>{
+    let currentWord = words[currentWordIndex];
+    let nextWord = currentWord === maxWordIndex ? words[0] : words[currentWordIndex + 1];
+
+ Array.from(currentWord.children).forEach((letter,i)=>{
+        setTimeout(()=>{
+            letter.className = "letter out";
+        },i*80);
+    });
+        nextWord.style.opacity ="1";
+        Array.from(nextWord.children).forEach((letter,i)=>{
+            letter.className =  "leeter  behind";
+            setTimeout(()=>{
+                letter.className = "letter out";
+            },340+i*80);
+          });
+ currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
+};
+
+changeText();
+setInterval(changeText,3000);
+
+     </script>
+       
+</body>
+</html>

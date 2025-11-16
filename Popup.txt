@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+#pop{
+ margin-top: 30px;
+ margin-left: 50px;
+ 
+}
+#view{
+    display: none;
+}
+
+.main {
+
+    position: absolute;
+    border: 1px solid whitesmoke;
+    width: 300px;
+    height: 300px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    
+    
+}
+.main span{
+    color: black;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-left: 10px;
+    position: relative;
+    top: 10px;
+    font-size: 20px;
+}
+.main p{
+    color: black;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+}
+.main a{
+ font-size: 20px;
+ padding-left: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 8px 5px 8px;
+    
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <li onclick="pop()"><img src="Profile-1.webp"  alt=""></li>
+    <div id="pop">
+        <div id="view" >
+            <div class="main">
+                <span class="close">&times;</span>
+                    <span>Registerd Users</span>
+                    <p>Have an account ? sign in now</p>
+      <a href="Register.html">Sign in </a> 
+              <hr>
+   
+              <span>New Customer</span>
+     <p> Create an account to get started today.</p> 
+         <a href="">Create an Account</a>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function pop(){
+
+var c = document.getElementById("view");
+    c.style.display = "block";
+var ctn = document.getElementsByClassName("close")[0];
+ctn.onclick = function () {
+    c.style.display = "none";
+}
+        }
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sign">
+    
+    
+     </div>

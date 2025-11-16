@@ -1,0 +1,161 @@
+/***Html****/
+
+ <!-- Menu Toggle Icon -->
+ <div class="menu-toggle" id="menu-toggle">✖</div>
+    <div class="nav-bar">
+        <nav>
+            <span class="logo"><img src="./Images/js.png" width="150px" height="150px"></span>
+            <ul id="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Education">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#skill-set">Skills</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+
+
+
+
+
+
+
+/***Css***/
+
+   .nav-bar {
+       margin-left: 20px;
+
+   }
+
+   nav {
+
+       width: 85%;
+       height: 50px;
+       display: inline-block;
+       background-color: white;
+       margin-top: 35px;
+
+       margin-left: 70px;
+       border-radius: 10px;
+
+
+   }
+
+   .logo {
+       position: absolute;
+       top: -15px;
+   }
+
+   nav ul {
+       display: flex;
+       float: right;
+       font-size: 18px;
+       padding-top: 15px;
+       list-style: none;
+       color: blue;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+   }
+
+   ul li a {
+       padding-bottom: 10px;
+       margin-right: 70px;
+       text-decoration: none;
+   }
+
+   ul li a:hover {
+       border-bottom: 4px solid darkorchid;
+
+   }
+
+
+   .menu-toggle {
+       display: none;
+       font-size: 40px;
+       color: darkorchid;
+       cursor: pointer;
+       z-index: 1001;
+   }
+
+
+
+
+
+
+   /* Responsive for screens <= 1200px */
+   @media (max-width: 1200px) {
+       .menu-toggle {
+           display: block;
+           margin-left: 400px;
+           margin-top: 40px;
+       }
+
+
+       nav ul {
+           position: absolute;
+           width: 430px;
+           height: 400px;
+           left: 20px;
+           color: #fff;
+           background-color: black;
+           flex-direction: row;
+           display: none;
+
+       }
+
+       nav ul li {
+           margin: 30px;
+
+       }
+
+       nav ul li a {
+           margin: 50px;
+           color: hsl(0, 0%, 100%);
+       }
+
+
+       nav ul.show {
+
+           flex-direction: row;
+           align-items: center;
+           display: block;
+
+           z-index: 40;
+       }
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****Javascript****/
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const navList = document.getElementById('nav-list');
+
+  menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('show');
+  });
+
+
+

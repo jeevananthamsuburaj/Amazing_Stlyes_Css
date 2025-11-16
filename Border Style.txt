@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            background: #dde1e7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            height: 150px;
+            width: 150px;
+            border-radius: 20px;
+            margin: 20px;
+        }
+
+        .hi1 {
+
+            box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
+                5px 5px 9px rgba(94, 104, 121, 0.3);
+        }
+
+        .hi2 {
+
+            box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
+                inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+        }
+
+        .hi3{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          border-radius: 50%;
+            box-shadow:  -5px -5px 9px rgba(255, 255, 255, 0.45),
+                5px 5px 9px rgba(94, 104, 121, 0.3);
+        }
+
+
+        .hi3::after{
+            content: '';
+            position: absolute;
+            height: 80%;
+            width: 80%;
+            background-color: transparent;
+            border-radius: 50%;
+            box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
+            inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hi1">hello world</div>
+    <div class="hi2">welcome</div>
+    <div class="hi3">love</div>
+</body>
+
+</html>
