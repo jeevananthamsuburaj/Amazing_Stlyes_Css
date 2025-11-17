@@ -23,7 +23,7 @@ A collection of reusable CSS styles and components for web development, includin
 ![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/81dddc492dacb9fc16ece72a77b379e2d24362cf/css/pan%20frying.png) <!-- Optional: Add a screenshot -->
 
 ## Pop up
-![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/eef666862d17396ef863a759ff3c97418c52e1a6/css/border.png) <!-- Optional: Add a screenshot -->
+![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/280ddf5c0921453d41d8bfce03ef26c4e05c5cdf/css/Popup.png) <!-- Optional: Add a screenshot -->
 
 ## Responsive Navbar
 ![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/eef666862d17396ef863a759ff3c97418c52e1a6/css/border.png) <!-- Optional: Add a screenshot -->
