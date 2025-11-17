@@ -24,7 +24,7 @@ A collection of reusable CSS styles and components for web development, includin
 ![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/280ddf5c0921453d41d8bfce03ef26c4e05c5cdf/css/Popup.png) <!-- Optional: Add a screenshot -->
 
 ## Responsive Navbar
-![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/eef666862d17396ef863a759ff3c97418c52e1a6/css/border.png) <!-- Optional: Add a screenshot -->
+![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/0cca93cc9a1abfb5e1ad9bd7c60268b9127bdcde/css/Responsive%20Navbar.png) <!-- Optional: Add a screenshot -->
 
 ## log in and Sign in
 ![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/cccb05c250bb57c1d6fb966beed9b319529930ed/css/Login%20%26%20Sign%20in.png) <!-- Optional: Add a screenshot -->
