@@ -13,7 +13,7 @@ A collection of reusable CSS styles and components for web development, includin
 
 
 ## Navbar backgruond change
-![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/eef666862d17396ef863a759ff3c97418c52e1a6/css/border.png) <!-- Optional: Add a screenshot -->
+![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/da75287e20fba586ec72d2203494975ae46da2e0/css/navbar%20shoot%20bullet.png) <!-- Optional: Add a screenshot -->
 
 
 ## Pan frying 
