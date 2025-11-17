@@ -6,7 +6,7 @@ A collection of reusable CSS styles and components for web development, includin
 
 
 ## Display Name Loop
-![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/eef666862d17396ef863a759ff3c97418c52e1a6/css/border.png) <!-- Optional: Add a screenshot -->
+![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/179c066a107828fb9594ab3191a30a7af1e6f44e/css/Word%20Loop.png) <!-- Optional: Add a screenshot -->
 
 ## Gallery
 ![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/eef666862d17396ef863a759ff3c97418c52e1a6/css/border.png) <!-- Optional: Add a screenshot -->
