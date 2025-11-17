@@ -1,6 +1,9 @@
 # Amazing_Stlyes_Css
 A collection of reusable CSS styles and components for web development, including layout, typography, colors, and utility classes to streamline styling across projects.
 
+## blob
+![Screenshot](https://lottiefolder.com/wp-content/uploads/2022/11/blob-lottie-animation-4-1.gif) <!-- Optional: Add a screenshot -->
+
 ## Border-Style
 ![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/eef666862d17396ef863a759ff3c97418c52e1a6/css/border.png) <!-- Optional: Add a screenshot -->
 
@@ -27,11 +30,6 @@ A collection of reusable CSS styles and components for web development, includin
 
 ## log in and Sign in
 ![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/cccb05c250bb57c1d6fb966beed9b319529930ed/css/Login%20%26%20Sign%20in.png) <!-- Optional: Add a screenshot -->
-
-
-## blob
-![Screenshot](https://lottiefolder.com/wp-content/uploads/2022/11/blob-lottie-animation-4-1.gif) <!-- Optional: Add a screenshot -->
-
 
 
 
