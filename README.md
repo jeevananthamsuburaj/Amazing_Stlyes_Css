@@ -19,8 +19,6 @@ A collection of reusable CSS styles and components for web development, includin
 ![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/da75287e20fba586ec72d2203494975ae46da2e0/css/navbar%20shoot%20bullet.png) <!-- Optional: Add a screenshot -->
 
 
-## Pan frying 
-![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/81dddc492dacb9fc16ece72a77b379e2d24362cf/css/pan%20frying.png) <!-- Optional: Add a screenshot -->
 
 ## Pop up
 ![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/280ddf5c0921453d41d8bfce03ef26c4e05c5cdf/css/Popup.png) <!-- Optional: Add a screenshot -->
@@ -32,6 +30,8 @@ A collection of reusable CSS styles and components for web development, includin
 ![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/cccb05c250bb57c1d6fb966beed9b319529930ed/css/Login%20%26%20Sign%20in.png) <!-- Optional: Add a screenshot -->
 
 
+## Pan frying 
+![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/81dddc492dacb9fc16ece72a77b379e2d24362cf/css/pan%20frying.png) <!-- Optional: Add a screenshot -->
 
 
 
