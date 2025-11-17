@@ -20,7 +20,7 @@ A collection of reusable CSS styles and components for web development, includin
 
 
 ## Pan frying 
-![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/eef666862d17396ef863a759ff3c97418c52e1a6/css/border.png) <!-- Optional: Add a screenshot -->
+![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/81dddc492dacb9fc16ece72a77b379e2d24362cf/css/pan%20frying.png) <!-- Optional: Add a screenshot -->
 
 ## Pop up
 ![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/eef666862d17396ef863a759ff3c97418c52e1a6/css/border.png) <!-- Optional: Add a screenshot -->
