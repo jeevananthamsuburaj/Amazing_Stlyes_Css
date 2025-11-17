@@ -26,7 +26,7 @@ A collection of reusable CSS styles and components for web development, includin
 ![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/eef666862d17396ef863a759ff3c97418c52e1a6/css/border.png) <!-- Optional: Add a screenshot -->
 
 ## log in and Sign in
-![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/eef666862d17396ef863a759ff3c97418c52e1a6/css/border.png) <!-- Optional: Add a screenshot -->
+![Screenshot](https://github.com/jeevananthamsuburaj/Amazing_Stlyes_Css/blob/cccb05c250bb57c1d6fb966beed9b319529930ed/css/Login%20%26%20Sign%20in.png) <!-- Optional: Add a screenshot -->
 
 
 ## blob
